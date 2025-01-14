@@ -16,8 +16,11 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+          Niklas!
+          PAulo was here
+          Jimmy was here!
         </a>
-        PAulo was here
+        
       </header>
     </div>
   );
