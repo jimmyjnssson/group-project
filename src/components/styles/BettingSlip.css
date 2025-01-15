@@ -1,0 +1,136 @@
+.betslip-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 18.75rem;
+  background: linear-gradient(-50deg, #004F2D, #3CB371, #8FD694);
+  border: 0.0625rem solid #ddd; 
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: 0 -0.25rem 0.375rem rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.betslip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem;
+  color: #fff;
+  background: linear-gradient(50deg, #004F2D, #3CB371, #8FD694);
+  font-weight: bold;
+  font-size: 1rem;
+  border-bottom: 0.125rem solid #ddd;
+}
+
+.betslip-title {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.betslip-odds {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.toggle-betslip-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.betslip-content {
+  padding: 0.625rem;
+  background: #fff;
+}
+
+.betslip-outcome-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.betslip-outcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 0.0625rem solid #ddd;
+}
+
+.outcome-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.stake-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.875rem;
+}
+
+.stake-input {
+  margin-top: 0.3125rem;
+  padding: 0.3125rem;
+  width: 3.75rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.25rem;
+  text-align: right;
+}
+
+.betslip-summary {
+  padding: 0.625rem;
+  background: #fff;
+  border-top: 0.125rem solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.payout-label {
+  font-size: 0.75rem;
+  color: #666;
+  margin: 0;
+}
+
+.payout-value {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.place-bet-btn {
+  padding: 0.625rem 0.9375rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #fff;
+  background: #ff4d4d;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.place-bet-btn:hover {
+  background: #e63b3b;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}

@@ -1,26 +1,25 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import Footer from './components/pages/Footer';
+import Header from './components/pages/Header';
+import Home from './components/pages/Home';
+import MmaOdds from './components/pages/MmaOdds';
+import BettingSlip from './components/pages/BettingSlip';
+import { BettingSlipProvider } from './components/scripts/BettingSlipContext'; // Import the provider
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-          Niklas!
-
-          Jimmy was here!
-        </a>
-      </header>
+      <Header />
+      <BettingSlipProvider> {/* Wrap the whole app inside the provider */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/mma" element={<MmaOdds />} />
+        </Routes>
+        <BettingSlip /> {/* BettingSlip is also inside the provider */}
+      </BettingSlipProvider>
+      <Footer />
     </div>
   );
 }

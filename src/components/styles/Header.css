@@ -1,0 +1,93 @@
+.header {
+    background: linear-gradient(50deg, #004F2D, #3CB371, #8FD694);
+    min-height: 10rem;
+    color: white;
+}
+
+.menu-container {
+    position: relative;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    transition: transform 0.3s ease;
+}
+
+/* Drawer Menu */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.drawer ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.drawer .menu-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.drawer .menu-item:hover {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.icon {
+    fill: #666;
+}
+
+/* Drawer Close Button */
+.menu-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Open Drawer */
+.drawer.open {
+    left: 0;
+}
+
+
+
+/* Hide the hamburger menu button when the menu is open */
+.menu-toggle.hidden {
+    display: none;
+}
+
+.logo{
+    height: 8rem;
+}
