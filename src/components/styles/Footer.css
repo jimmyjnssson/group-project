@@ -12,8 +12,8 @@ body {
 .footer {
     margin-top: auto;
     color: aliceblue;
-    background-color: rgb(57, 61, 51);
-    min-height: 3rem;
+    background: linear-gradient(50deg, #8FD694, #3CB371, #004F2D  );
+    min-height: 5rem;
     text-align: center;
     width: 100%;
     display: flex;
