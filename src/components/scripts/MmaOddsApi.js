@@ -1,4 +1,4 @@
-const API_KEY = 'b2a41f8224491dd931b71b56767a1a1a'; // API key included here for simplicity
+const API_KEY = '945d51e0a958d8252c3e9e27a6535262'; // API key included here for simplicity
 const API_URL = 'https://api.the-odds-api.com/v4/sports/mma_mixed_martial_arts/odds';
 const BOOKMAKER = 'Pinnacle';
 
