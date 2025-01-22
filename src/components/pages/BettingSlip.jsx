@@ -26,35 +26,40 @@ export default function BettingSlip() {
   };
 
   return (
-    <div className={`betslip-container ${isMinimized ? 'minimized' : ''}`}>
-      <div className="betslip-header">
-        <h2 className="betslip-title">Betting Slip</h2>
-        <button className="toggle-betslip-btn" onClick={handleToggle}>X</button>
+    <div className={`betslip-container`}>
+      <div className="flex items-center justify-between bg-rich-black text-mint-cream p-4 rounded-t-lg">
+        <h2 className="text-lg font-semibold">Betting Slip</h2>
+        <button
+          className="text-mint-cream bg-transparent hover:text-mindaro transition duration-200"
+          onClick={handleToggle}
+        >
+          {isMinimized ? '▲' : '▼'}
+        </button>
       </div>
 
-  {/* BetSlip Section */}
       {!isMinimized && (
-        <div className="betslip-content">
+        <div className="p-4 bg-white shadow-lg rounded-b-lg">
           {bets.length > 0 ? (
-            <ul className="betslip-outcome-list">
-              {bets.map(bet => (
-                <li key={bet.betId} className="betslip-outcome">
-                  <button className="close-btn" onClick={() => removeBet(bet.betId)}>
+            <ul className="divide-y divide-gray-200">
+              {bets.map((bet) => (
+                <li key={bet.betId} className="flex items-center justify-between py-3">
+                  <button
+                    className="text-warning hover:text-warning transition duration-200"
+                    onClick={() => removeBet(bet.betId)}
+                  >
                     x
                   </button>
-                  <div className="outcome-info">
-                    <span className="outcome-label">{bet.team}</span>
-                    <p className="odds-display">Odds: {bet.odds}</p>
+                  <div className="flex flex-col">
+                    <span className="text-rich-black-2 font-medium">{bet.team}</span>
+                    <p className="text-hookers-green text-sm">Odds: {bet.odds}</p>
                   </div>
-
-                  {/* Stake Section */}
-                  <div className="stake-container">
-                    <span>Stake:</span>
+                  <div className="flex flex-col items-end">
+                    <span className="text-gray-600 text-sm">Stake:</span>
                     <input
-                      className="stake-input"
+                      className="w-24 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-mint"
                       type="number"
                       value={bet.stake || 0}
-                      onChange={event => handleStakeChange(event, bet.betId)}
+                      onChange={(event) => handleStakeChange(event, bet.betId)}
                       placeholder="Amount"
                     />
                   </div>
@@ -62,17 +67,20 @@ export default function BettingSlip() {
               ))}
             </ul>
           ) : (
-            <p>No bets added yet.</p>
+            <p className="text-gray-500 text-center">No bets added yet.</p>
           )}
         </div>
       )}
-
-      {/* Summary Section */}
+  
       {bets.length > 0 && !isMinimized && (
-        <div className="betslip-summary">
-          <p className="payout-label">Total Payout:</p>
-          <p className="payout-value">{calculateTotalPayout()} kr</p>
-          <button className="place-bet-btn">Place Bet</button>
+        <div className="bg-honeydew p-4 border-t border-gray-200">
+          <div className="flex justify-between items-center">
+            <p className="text-rich-black font-medium">Total Payout:</p>
+            <p className="text-dartmouth-green font-semibold">{calculateTotalPayout()} kr</p>
+          </div>
+          <button className="w-full mt-4 bg-mint text-white py-2 rounded-lg hover:bg-ok transition duration-200">
+            Place Bet
+          </button>
         </div>
       )}
     </div>
