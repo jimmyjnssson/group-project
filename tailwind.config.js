@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}",
-    
+   
   ],
   theme: {
     extend: {
@@ -21,7 +21,7 @@ module.exports = {
         // Light tones
         'honeydew': '#CDE3D3',
         'mint-cream': '#F5FBF0',
-
+ 
         // Status colors
         'warning': '#FFA94D', // Warm warning color
         'ok': '#4DD8A3', // Cool OK color
