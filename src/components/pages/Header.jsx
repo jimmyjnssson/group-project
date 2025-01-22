@@ -37,57 +37,67 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="header">
-      <div className="menu-toggle" id="menu-toggle" onClick={openDrawer}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <img src={gg_logo} className="logo" alt="Logo" />
-      <p>Green Group Odds</p>
+    <div className="flex justify-between items-center p-10 text-aliceblue bg-gradient-to-r from-[#004F2D] via-[#3CB371] to-[#8FD694]">
+      {/* Drawer Toggle - only show if the drawer is closed */}
+      {!isDrawerOpen && (
+        <div className="menu-toggle cursor-pointer" onClick={openDrawer}>
+          <span className="block w-6 h-1 bg-white mb-1"></span>
+          <span className="block w-6 h-1 bg-white mb-1"></span>
+          <span className="block w-6 h-1 bg-white"></span>
+        </div>
+      )}
 
-      <div className="user-info">
+      {/* Logo - Centered */}
+      <div className="flex-grow text-center">
+        <img src={gg_logo} className="mx-auto h-28" alt="Logo" />
+      </div>
+
+      {/* User Info (Credits, Username, Logout) */}
+      <div className="flex items-center space-x-4">
         {fakeUser ? (
-          <div>
-            <h1>Welcome, {fakeUser.email}!</h1>
-            <p>Your credits: {fakeUser.credits}</p>
-            <button onClick={logout} className="logout-button">
+          <div className="text-right font-sans" style={{ fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif' }}>
+            <h1 className="text-sm font-bold">Welcome, {fakeUser.email}!</h1> {/* Make username bold */}
+            <p className="text-xs font-bold">Your credits: {fakeUser.credits}</p> {/* Make credits bold */}
+            <button
+              onClick={logout}
+              className="bg-gray-800 text-white px-3 py-1.5 text-sm rounded-md transition-all duration-500 ease-in-out hover:bg-gray-700 mt-4">
               Logout
             </button>
           </div>
         ) : (
-          <h1> </h1> // Show loading if no user data is found
+          <h1 className="text-sm"></h1> // Empty when user is not logged in
         )}
       </div>
 
+      {/* Navigation Drawer */}
       <nav className={`drawer ${isDrawerOpen ? 'open' : ''}`} id="drawer">
         <button className="menu-close" id="menu-close" onClick={closeDrawer}>
           X
         </button>
-        <ul>
+        <ul className="bg-gray-200 text-gray-800 font-sans rounded-lg shadow-md">
           <li>
-            <Link to="/home" className="menu-item" onClick={closeDrawer}>
+            <Link to="/home" className="menu-item py-3 px-4 block hover:bg-gray-300 leading-loose" onClick={closeDrawer}>
               <span>Home</span>
             </Link>
           </li>
           <li>
-            <Link to="/mma" className="menu-item" onClick={closeDrawer}>
-              <span>MMA-ODDS</span>
+            <Link to="/mma" className="menu-item py-3 px-4 block hover:bg-gray-300 leading-loose" onClick={closeDrawer}>
+              <span>MMA</span>
             </Link>
           </li>
           <li>
-            <Link to="/page3" className="menu-item" onClick={closeDrawer}>
-              <span>Page 3</span>
+            <Link to="/page3" className="menu-item py-3 px-4 block hover:bg-gray-300 leading-loose" onClick={closeDrawer}>
+              <span>Hockey</span>
             </Link>
           </li>
           <li>
-            <Link to="/page4" className="menu-item" onClick={closeDrawer}>
-              <span>Page 4</span>
+            <Link to="/page4" className="menu-item py-3 px-4 block hover:bg-gray-300 leading-loose" onClick={closeDrawer}>
+              <span>Formula 1</span>
             </Link>
           </li>
           <li>
-            <Link to="/page5" className="menu-item" onClick={closeDrawer}>
-              <span>Page 5</span>
+            <Link to="/page5" className="menu-item py-3 px-4 block hover:bg-gray-300 leading-loose" onClick={closeDrawer}>
+              <span>Football</span>
             </Link>
           </li>
         </ul>
