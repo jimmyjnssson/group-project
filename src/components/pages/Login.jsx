@@ -28,6 +28,18 @@ const Login = () => {
       signInWithEmailAndPassword(auth, email, password)
         .then((userCredentials) => {
           console.log(userCredentials);
+          const user = userCredentials.user;
+          
+          // Create a fake user object and store it in localStorage
+          const fakeUser = {
+            email: user.email,
+            credits: 100, // Add default credits (or any other data)
+          };
+          localStorage.setItem("fakeUser", JSON.stringify(fakeUser)); // Save fake user to localStorage
+          
+          // Optionally, navigate to home page
+          navigate("/home");
+          window.location.reload();
         })
         .catch((err) => {
           if (err.code === "auth/invalid-email") {
@@ -47,13 +59,6 @@ const Login = () => {
   };
 
   useEffect(() => {
-    // Sign out the user when they open the login page
-    auth.signOut().then(() => {
-      console.log("User signed out on page load");
-    }).catch((error) => {
-      console.error("Error signing out:", error);
-    });
-  
     if (!loading && user) {
       navigate("/home");
     }
@@ -72,7 +77,6 @@ const Login = () => {
             Back to register
           </div>
         </Link>
-        
       </div>
 
       <h1 className="text-2xl text-gray-800 text-center font-medium mt-5 p-2">
@@ -114,7 +118,7 @@ const Login = () => {
         </label>
         <button
           type="submit"
-          className="w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0  bg-[#116125ff] hover:bg-[#45C190] text-white text-base font-medium md:font-semibold rounded-full mt-5 md:mt-4"
+          className="w-[270px] h-[30] xs:w-[360px] xs:h-[40px] md:w-[450px] md:h-[50px] p-2 md:p-0 bg-[#116125ff] hover:bg-[#45C190] text-white text-base font-medium md:font-semibold rounded-full mt-5 md:mt-4"
         >
           Submit
         </button>
