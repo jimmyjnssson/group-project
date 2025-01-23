@@ -16,9 +16,10 @@ It provides functionality to add, remove, and update bets, as well as place bets
 - Frontend: HTML, JavaScript, React
 - Styling: Tailwind
 - Firebase for identification
-- Version Control GitHUb
+- Version Control: Git
+- Hosting: GitHub
 - Deployment: GitGub Pages
-- Application Program Iinterface for data retreavment.
+- Application Program interface for data retreavment.
 
 ## Usage
 
