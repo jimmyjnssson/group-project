@@ -32,8 +32,8 @@ export default function Header() {
   }, []);
 
   return (
-    <div
-      className="relative p-10 text-aliceblue bg-gradient-to-r from-[#004F2D] via-[#3CB371] to-[#8FD694] font-sans"
+    
+    <div className="relative p-10 text-aliceblue bg-gradient-to-r from-[#004F2D] via-[#3CB371] to-[#8FD694] font-sans"
     >
       {/* Hamburger menu icon (absolute so it doesn't push the center) */}
       {!isDrawerOpen && (
@@ -41,9 +41,9 @@ export default function Header() {
           className="absolute top-10 left-10 cursor-pointer"
           onClick={openDrawer}
         >
-          <span className="block w-6 h-1 bg-white mb-1"></span>
-          <span className="block w-6 h-1 bg-white mb-1"></span>
-          <span className="block w-6 h-1 bg-white"></span>
+          <span className="block w-6 h-1 bg-black mb-1"></span>
+          <span className="block w-6 h-1 bg-black mb-1"></span>
+          <span className="block w-6 h-1 bg-black"></span>
         </div>
       )}
 
