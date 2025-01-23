@@ -17,8 +17,7 @@ Frontend: HTML, JavaScript, React
 Styling: Firebase
 Version Control GitHUb
 Deployment: GitGub Pages
-API_KEY = '945d51e0a958d8252c3e9e27a6535262';
-API_URL = 'https://api.the-odds-api.com/v4/sports/mma_mixed_martial_arts/odds';
+API
 
 ## Usage
 
