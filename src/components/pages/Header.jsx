@@ -32,37 +32,47 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="flex justify-between items-center p-10 text-aliceblue bg-gradient-to-r from-[#004F2D] via-[#3CB371] to-[#8FD694] font-sans">
+    <div
+      className="relative p-10 text-aliceblue bg-gradient-to-r from-[#004F2D] via-[#3CB371] to-[#8FD694] font-sans"
+    >
+      {/* Hamburger menu icon (absolute so it doesn't push the center) */}
       {!isDrawerOpen && (
-        <div className="menu-toggle cursor-pointer" onClick={openDrawer}>
+        <div
+          className="absolute top-10 left-10 cursor-pointer"
+          onClick={openDrawer}
+        >
           <span className="block w-6 h-1 bg-white mb-1"></span>
           <span className="block w-6 h-1 bg-white mb-1"></span>
           <span className="block w-6 h-1 bg-white"></span>
         </div>
       )}
 
-      <div className="flex-grow text-center">
+      <div className="flex justify-center">
         <img src={gg_logo} className="mx-auto h-28" alt="Logo" />
       </div>
 
-      <div className="flex items-center space-x-4">
-        {fakeUser ? (
-          <div className="text-right font-sans">
-            <h1 className="text-sm font-bold">Welcome, {fakeUser.email}!</h1>
-            <p className="text-xs font-bold">Your credits: {fakeUser.credits}</p>
-            <button
-              onClick={logout}
-              className="bg-gray-800 text-white px-3 py-1.5 text-sm rounded-md transition-all duration-500 ease-in-out hover:bg-gray-700 mt-4">
-              Logout
-            </button>
-          </div>
-        ) : (
-          <h1 className="text-sm"></h1>
-        )}
-      </div>
+      {/* User Info (absolutely positioned on the right so it does not affect the center) */}
+      {fakeUser && (
+        <div className="absolute top-10 right-10 text-right font-sans">
+          <h1 className="text-sm font-bold">Welcome, {fakeUser.email}!</h1>
+          <p className="text-xs font-bold">Your credits: {fakeUser.credits}</p>
+          <button
+            onClick={logout}
+            className="bg-warning text-white px-3 py-1.5 text-sm rounded-md transition-all duration-500 ease-in-out hover:bg-gray-700 mt-4"
+          >
+            Logout
+          </button>
+        </div>
+      )}
 
-      <nav className={`drawer ${isDrawerOpen ? 'open' : ''}`} id="drawer" style={{ backgroundColor: '#F5FBF0', height: '100vh' }}>
-        <button className="menu-close" id="menu-close" onClick={closeDrawer}>X</button>
+      <nav
+        className={`drawer ${isDrawerOpen ? 'open' : ''}`}
+        id="drawer"
+        style={{ backgroundColor: '#F5FBF0', height: '100vh' }}
+      >
+        <button className="menu-close" id="menu-close" onClick={closeDrawer}>
+          X
+        </button>
         <ul className="text-[#004F2D] font-sans rounded-lg shadow-md p-4 h-full">
           {[
             { path: "/home", label: "Home" },
@@ -71,7 +81,10 @@ export default function Header() {
             { path: "/page4", label: "Formula 1" },
             { path: "/page5", label: "Football" },
           ].map(({ path, label }) => (
-            <li key={path} className="border-b border-[#004F2D] last:border-b-0">
+            <li
+              key={path}
+              className="border-b border-[#004F2D] last:border-b-0"
+            >
               <Link
                 to={path}
                 className="menu-item py-3 px-4 block transition-all duration-300 ease-in-out hover:bg-[#DDEFD0] hover:text-[#00331F] leading-loose"

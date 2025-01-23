@@ -45,7 +45,7 @@ const MmaOdds = () => {
             >
                <div className="fighter-row flex justify-around items-center text-center">
                   <div className="fighter flex flex-col items-center justify-center w-40">
-                    <strong className="text-dartmouth-green">{fight.home_team}</strong>
+                    <strong className="text-rich-black">{fight.home_team}</strong>
                     <button
                       className="odds-button mt-2 py-1 px-3 border border-mint rounded-md bg-white text-rich-black hover:bg-mindaro hover:text-rich-black-2 transition"
                       onClick={() =>
@@ -62,7 +62,7 @@ const MmaOdds = () => {
                   </div>
                   <div className="vs text-rich-black-2 font-bold mx-6 flex-shrink-0">vs</div>
                   <div className="fighter flex flex-col items-center justify-center w-40">
-                    <strong className="text-dartmouth-green">{fight.away_team}</strong>
+                    <strong className="text-rich-black">{fight.away_team}</strong>
                     <button
                       className="odds-button mt-2 py-1 px-3 border border-mint rounded-md bg-white text-rich-black hover:bg-mindaro hover:text-rich-black-2 transition"
                       onClick={() =>
