@@ -17,7 +17,7 @@ It provides functionality to add, remove, and update bets, as well as place bets
 - **Styling: Firebase
 - **Version Control GitHUb
 - **Deployment: GitGub Pages
-- **API
+- **Application Program Iinterface for data retreavment.
 
 ## Usage
 
