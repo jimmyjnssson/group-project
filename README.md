@@ -11,6 +11,14 @@ The `BettingSlip` component is a React component that allows users to manage the
 - **Place Bet**: Place the bet if the user has enough credits, and update the user's credits accordingly.
 - **Reset Betting Slip**: Reset the betting slip after placing a bet.
 
+## Techologies Used
+Frontend: HTML, JavaScript, React
+Styling: Firebase
+Version Control GitHUb
+Deployment: GitGub Pages
+API_KEY = '945d51e0a958d8252c3e9e27a6535262';
+API_URL = 'https://api.the-odds-api.com/v4/sports/mma_mixed_martial_arts/odds';
+
 ## Usage
 
 ### Importing the Component
