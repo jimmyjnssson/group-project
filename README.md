@@ -14,10 +14,11 @@ It provides functionality to add, remove, and update bets, as well as place bets
 
 ## Techologies Used
 - Frontend: HTML, JavaScript, React
-- **Styling: Firebase
-- **Version Control GitHUb
-- **Deployment: GitGub Pages
-- **Application Program Iinterface for data retreavment.
+- Styling: Tailwind
+- Firebase for identification
+- Version Control GitHUb
+- Deployment: GitGub Pages
+- Application Program Iinterface for data retreavment.
 
 ## Usage
 
