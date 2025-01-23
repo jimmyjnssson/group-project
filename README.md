@@ -19,14 +19,4 @@ It provides functionality to add, remove, and update bets, as well as place bets
 - Version Control: Git
 - Hosting: GitHub
 - Deployment: GitGub Pages
-- Application Program interface for data retreavment.
-
-## Usage
-
-### Importing the Component
-
-```javascript
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../styles/BettingSlip.css';
-import { useBettingSlip } from '../scripts/BettingSlipContext';
+- Application Program interface (API) for data retreavment.
