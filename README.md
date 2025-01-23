@@ -1,6 +1,7 @@
-# BettingSlip Component
+# Green Group "GG Odds"
 
-The `BettingSlip` component is a React component that allows users to manage their betting slips. It provides functionality to add, remove, and update bets, as well as place bets if the user has sufficient credits.
+A webbsite for users to manage their betting. 
+It provides functionality to add, remove, and update bets, as well as place bets if the user has sufficient credits.
 
 ## Features
 
