@@ -13,11 +13,11 @@ It provides functionality to add, remove, and update bets, as well as place bets
 - **Reset Betting Slip**: Reset the betting slip after placing a bet.
 
 ## Techologies Used
-Frontend: HTML, JavaScript, React
-Styling: Firebase
-Version Control GitHUb
-Deployment: GitGub Pages
-API
+- **Frontend: HTML, JavaScript, React
+- **Styling: Firebase
+- **Version Control GitHUb
+- **Deployment: GitGub Pages
+- **API
 
 ## Usage
 
