@@ -15,7 +15,9 @@ It provides functionality to add, remove, and update bets, as well as place bets
 ## Techologies Used
 - Frontend: HTML, JavaScript, React
 - Styling: Tailwind
-- Firebase for identification
+- Design: Copilot
+- Coding: Visual Studio, ChattGPT, Copilot.
+- Login: Firebase for identification
 - Version Control: Git
 - Hosting: GitHub
 - Deployment: GitGub Pages
