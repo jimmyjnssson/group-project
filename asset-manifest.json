@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/group-project/static/css/main.b099b2d0.css",
+    "main.js": "/group-project/static/js/main.d86fde85.js",
+    "static/js/488.1ea5f265.chunk.js": "/group-project/static/js/488.1ea5f265.chunk.js",
+    "static/media/gg_logo_low.png": "/group-project/static/media/gg_logo_low.a3c86bd39f07f315a784.png",
+    "static/media/undraw_scrum-board_uqku.png": "/group-project/static/media/undraw_scrum-board_uqku.efabaa876105fd0345c8.png",
+    "static/media/Github.png": "/group-project/static/media/Github.5eab40a02fe444730a11.png",
+    "index.html": "/group-project/index.html",
+    "main.b099b2d0.css.map": "/group-project/static/css/main.b099b2d0.css.map",
+    "main.d86fde85.js.map": "/group-project/static/js/main.d86fde85.js.map",
+    "488.1ea5f265.chunk.js.map": "/group-project/static/js/488.1ea5f265.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b099b2d0.css",
+    "static/js/main.d86fde85.js"
+  ]
+}
